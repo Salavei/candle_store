@@ -15,7 +15,7 @@ class UserCandle(models.Model):
 
 
 class Order(models.Model):
-    user_id = models.ForeignKey(UserCandle, related_name='user_ordering', on_delete=models.CASCADE)
+    user_id = models.ForeignKey(UserCandle, related_name='user_ordering', null=True, on_delete=models.CASCADE)
     phone_number = models.CharField(max_length=17, null=False)
     address = models.CharField(max_length=255, null=False)
     COLOR_CHOICES = (
@@ -92,7 +92,7 @@ class Product(models.Model):
     candle_volume = models.PositiveIntegerField(choices=VOLUME_CHOICES, null=False)
     candle_wick = models.PositiveIntegerField(choices=WICK_CHOICES, null=False)
     description = models.TextField(max_length=1000, null=True, blank=False)
-    image = models.ImageField(upload_to='product/%Y/%m/%d', blank=False)
+    image = models.ImageField(upload_to='product/%Y/%m/%d', blank=True)
     price = models.DecimalField(max_digits=5, decimal_places=2)
 
     count = models.IntegerField(null=True, db_index=True)
