@@ -1,0 +1,146 @@
+main {
+    margin-bottom: 60px;
+}
+
+.main_wrapper {
+    border: 0.5px solid #9EA0A0;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-width: 1320px;
+    margin: 0 auto;
+    border-top: none;
+}
+
+.main_container {
+    padding-left: 76px;
+    padding-right: 299px;
+    display: grid;
+    grid-template-columns: 287px 370px;
+    justify-content: space-between;
+}
+
+.main_img {
+    background-image: url('./img/Vector1.png');
+    width: 287px;
+    height: 624px;
+    margin-top: 59px;
+    margin-bottom: 79px;
+    position: relative;
+}
+
+.main_layer h1{
+    font-family: 'Cormorant',Bold;
+    font-size: 96px;
+    line-height: 116px;
+    color: #D78F43;
+    margin-top: 184px;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 1;
+}
+
+.main_layer h1:after {
+    content: 'candle';
+    position: absolute;
+    font-family:'Cormorant', Medium;
+    font-size: 64px;
+    line-height: 78px;
+    color: #9EA0A0;
+    transform: translate(-37%, 100%);
+}
+
+.main_layer p {
+    margin-top: 42px;
+    font-family: 'Jost',Medium;
+    font-size: 18px;
+    line-height: 26px;
+    color: #9EA0A0;
+    margin-bottom: 0;
+    position: relative;
+
+}
+
+.main_customize {
+    margin-top: 43px;
+    max-width: 250px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.main_customize p {
+    font-family: 'Jost',Medium;
+    font-size: 18px;
+    line-height: 26px;
+    color: #9EA0A0;
+    margin-top: 40px;
+}
+
+.arrow {
+    position: absolute;
+    width: 107px;
+    border: 1px solid #565959;
+    box-sizing: border-box;
+    transform: translate(85%,53px);
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.arrow::after {
+    content: '';
+    width: 5px;
+    color: #565959;
+    border: 1px solid #565959;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -3px;
+    right: -2px;
+    border-radius: 1px;
+}
+
+.arrow::before {
+    content: '';
+    width: 5px;
+    color: #565959;
+    border: 1px solid #565959;
+    transform: rotate(135deg);
+    position: absolute;
+    top: 1px;
+    right: -2px;
+    border-radius: 1px;
+}
+
+
+
+.range {
+    width: 107px;
+    height: 107px;
+    border: 0.5px solid #8C8E8E;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.main_img::after {
+    content: "";
+    position: absolute;
+    width: 1120px;
+    height:  750px;
+    background: rgba(13, 17, 18, 0.31);
+    border-radius: 50%;
+    right: -330%;
+    top: -9%;
+}
+
+
+
+
+
+
+
+
+
+
+
