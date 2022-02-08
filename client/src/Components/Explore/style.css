@@ -1,0 +1,127 @@
+.explore_wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    border: 0.5px solid #9EA0A0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding-left: 150px;
+    padding-right: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.explore_heading {
+    font-family: 'Cormorant', Bold;
+    font-size: 48px;
+    line-height: 58px;
+    color: #9EA0A0;
+    /*text-transform: uppercase;*/
+    text-align: center;
+}
+
+.explore_mainContainer {
+    display: grid;
+    grid-template-columns: 290px 580px;
+    /*grid-gap: 240px;*/
+    /*grid-gap: 240px;*/
+    justify-content: space-between;
+    margin-top: 62px;
+    margin-bottom: 110px;
+}
+
+.explore_coconut {
+    font-family: Cormorant;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    color: #9EA0A0;
+    margin-bottom: 0;
+}
+
+.explore_composition {
+    font-family: Jost;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #9EA0A0;
+    margin-bottom: 0;
+}
+
+.explore_composition span {
+    font-family: Jost;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.explore_price {
+    max-width: 170px;
+    margin-top: 0;
+    font-family: Jost;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #9EA0A0;
+    margin-bottom: 0;
+}
+
+.explore_price span {
+    font-family: Jost;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.explore_button {
+    margin-top: 30px;
+    border: 0.5px solid #D78F43;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: 'Jost', Regular;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 9px 18px 9px 18px;
+    color: #9EA0A0;
+    cursor: pointer;
+}
+
+.explore_imgWrapper {
+    background: #D78F43;
+    background: linear-gradient(212.19deg, rgba(215, 143, 67, 0.7) 5.77%, rgba(215, 143, 67, 0) 66.56%);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.explore_imgContainer {
+    border: 0.5px solid #9EA0A0;
+    box-sizing: border-box;
+    border-radius: 7px;
+    padding: 70px 55px 70px 57px;
+}
+
+.explore_img {
+    width: 408px;
+    height: 380px;
+    background-image: url("./img/21.png");
+    position: relative;
+}
+
+.explore_img::after {
+    content: '';
+    height: 1000px;
+    width: 1300px;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    background: radial-gradient(30.13% 37.8% at 50% 50%, rgba(255, 255, 255, 0.31) 0%, rgba(255, 255, 255, 0) 100%);
+    background-size: contain;
+    transform: translate(-43%, -78%);
+}

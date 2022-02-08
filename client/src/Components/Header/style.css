@@ -1,0 +1,85 @@
+.header {
+    background-color: #0D1112;
+    padding: 20px;
+}
+
+.header_wrapper {
+    border: 0.5px solid #9EA0A0;
+    box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    max-width: 1320px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns: 66px 117px;
+    /*grid-gap: 1017px;*/
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.header_logo h2 {
+    margin-bottom: 27px;
+    margin-top: 13px;
+    font-family: "Cormorant", Bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #9EA0A0;
+    position: relative;
+    cursor: pointer;
+}
+
+.header_logo h2::after {
+    content: 'candle';
+    position: absolute;
+    transform: translate(-110%, 135%);
+    font-family: 'Cormorant', Medium;
+    font-size: 14px;
+    line-height: 17px;
+
+
+}
+
+.header_container::before {
+    content: '';
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    transform: translate(-60%, -60%);
+    top: 0px;
+    left: 90px;
+    background: radial-gradient(30.13% 37.8% at 50% 50%, rgba(255, 255, 255, 0.31) 0%, rgba(255, 255, 255, 0) 135%);
+
+}
+
+.header_button {
+    margin: 18px 0px 18px 0px;
+    border: 0.5px solid #D78F43;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: transparent;
+    color: #9EA0A0;
+    cursor: pointer;
+    font-family: 'Jost', Medium;
+    font-size: 18px;
+    line-height: 26px;
+    position: relative;
+    padding-right: 20px;
+}
+
+.header_button::after {
+    content: '';
+    background-image: url("./img/ant-design_user-outlined.png");
+    width: 21px;
+    height: 21px;
+    right: 10%;
+    background-size: cover;
+    position: absolute;
+
+}
+
+
