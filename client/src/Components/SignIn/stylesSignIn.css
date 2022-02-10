@@ -94,14 +94,42 @@ cursor: pointer;
     height: 20px;
     display: flex;
     align-items: center;
-    text-decoration-line: underline;
     margin: 30px 5px;
     color: #5D5D5D;
 }
 
-.aBox input[type="checkbox"] {
-   width: 15px;
+.aBox input[type=checkbox] {
+    display: none;
+}
+
+label {
+    color: #fff;
+}
+
+/* Checkboxes */
+.aBox input[type=checkbox] + label {
     border: 1px solid #AFB1B1;
 box-sizing: border-box;
-background: yellow;
+    width: 14px;
+    height: 14px;
+    line-height: 0.25em;
+    padding-top: 4.5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.aBox label span {
+    font-family: Jost;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    color: #5E5E5E;
+}
+
+.aBox input[type=checkbox]:checked + label::after {
+    content: "\2716";
 }
