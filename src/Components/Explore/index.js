@@ -1,7 +1,16 @@
 import React from "react";
-import './style.css'
+import './style.css';
+import {fetchOrder} from "./Api/getPrice";
+import {query} from "express";
+import {useState} from "react";
 
 const Explore = () => {
+    const [price,setPrice] = useState()
+      const pricee = async (t) => {
+      const method = query.get("method");
+      const {price} = await fetchOrder({method:String(1)});
+      console.log(price)
+    };
     return (
         <>
             <section className={'explore'}>
@@ -20,9 +29,9 @@ const Explore = () => {
                                 </p>
                                 <p className={'explore_price'}>
                                     <span>Объем:</span> 200мл
-                                    <span> Цена: 27 BYN</span>
+                                    <span> Цена:  BYN</span>
                                 </p>
-                                <button className={'explore_button'}>
+                                <button className={'explore_button'} onClick={pricee}>
                                     Customize
                                 </button>
                             </div>
