@@ -13,7 +13,6 @@ const fetchPrice = async () => {
 
 app.get('/swagger', async (req, res) => {
         console.log(req.query)
-        const {method} = req.query
         const data = await fetchPrice();
         res.json(data);
 })
