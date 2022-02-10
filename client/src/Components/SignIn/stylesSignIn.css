@@ -1,0 +1,107 @@
+.formSignIn{
+    height: 100vh;
+        width: 272px;
+        margin-top: 140px;
+}
+
+.formSignIn p{
+    font-family: Jost;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    color: #9EA0A0;
+}
+
+.formSignIn input{
+    width: 100%;
+height: 40px;
+color: white;
+border: 0.5px solid #D78F43;
+box-sizing: border-box;
+border-radius: 3px;
+background-color: rgba(215, 143, 67, 0);
+padding-left: 40px;
+}
+.email{
+    background: url('./images/key.svg') 8px no-repeat;
+    
+}
+
+.password{
+    background: url('./images/massage.svg') 8px no-repeat;
+}
+
+.buttonSingIn{
+    background: linear-gradient(268.87deg, rgba(215, 143, 67, 0.68) 0%, rgba(215, 143, 67, 0) 100.94%);
+    border-radius: 3px;
+width: 100%;
+border: 0;
+    font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 25px;
+margin-bottom: 15px;
+color: #9EA0A0;
+}
+
+.buttonSingIn:hover{
+    background: linear-gradient(268.87deg, rgba(215, 143, 67, 0.68) 0%, rgba(215, 143, 67, 0) 100.94%);
+border-radius: 3px;
+    filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.6));
+}
+
+.formSignIn h1{
+    font-family: Cormorant;
+font-style: italic;
+font-weight: bold;
+font-size: 48px;
+line-height: 58px;
+display: flex;
+align-items: center;
+justify-content: center;
+top: 160px;
+color: #9EA0A0;
+}
+
+.formSignIn a{
+    font-family: Jost;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+justify-content: center;
+color: #9EA0A0;
+cursor: pointer;
+}
+
+.aBox{
+    display: flex;
+    justify-content: space-between;
+    font-family: Jost;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+    margin: 30px 5px;
+    color: #5D5D5D;
+}
+
+.aBox input[type="checkbox"] {
+   width: 15px;
+    border: 1px solid #AFB1B1;
+box-sizing: border-box;
+background: yellow;
+}

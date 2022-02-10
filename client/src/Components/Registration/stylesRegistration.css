@@ -1,0 +1,133 @@
+.borderContainer{
+height: 820px;
+margin: 0 60px;
+margin-top: 20px;
+border: 0.5px solid #9EA0A0;
+box-sizing: border-box;
+border-radius: 20px;
+margin-bottom: 60px;
+
+font-family: Jost;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+
+color: #9EA0A0;
+}
+
+.greyLine{
+    border: 0.5px solid #9EA0A0;
+}
+
+.registrHeader{
+    padding: 13px 83px 27px 59px;
+    display: flex;
+justify-content: space-between;    
+}
+
+.registrHeader p{
+    font-family: Cormorant;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: -8px;
+    /* identical to box height */
+    margin: 0;
+    text-align: end;
+    color: #9EA0A0;
+}
+
+.registrHeader span{
+    font-family: Cormorant;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #9EA0A0;
+}
+
+.registrForm{
+    width: 390px;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.registrForm h1{
+    font-family: Cormorant;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    
+    color: #9EA0A0;
+}
+
+.registrForm h2{
+    font-family: Cormorant;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #9EA0A0;
+}
+
+.registrForm input{
+    border: 0.5px solid #D78F43;
+box-sizing: border-box;
+border-radius: 3px;
+background-color: rgba(215, 143, 67, 0);
+height: 33px;
+margin: 30px 0;
+padding-left: 12px;
+font-family: Jost;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+display: flex;
+align-items: center;
+
+color: #9EA0A0;
+}
+
+.registrForm div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.registrForm div input{
+    margin: 0;
+}
+
+.buttonRegistr{
+    margin-right: -66px;
+    cursor: pointer;
+}
+
+.backButton{
+    position: absolute;
+    margin-left: 4.5%;
+    top: 178px;
+    cursor: pointer;
+}
+
+.backButton span{
+    font-family: Cormorant;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+margin-left: 15px;
+
+color: #9EA0A0;
+}
