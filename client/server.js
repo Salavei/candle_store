@@ -1,23 +1,43 @@
-const express = require('express')
-const axios = require("axios")
-const cors = require('cors')
-const app = express()
-const port = 4000
+// const express = require('express')
+// const axios = require("axios")
+// const cors = require('cors')
+// const app = express()
+// const port = 4000
 
-app.use(cors())
+// app.use(cors())
 
-const fetchPrice = async ({method}) => {
-    const res = await axios (`https://siteitoverone.herokuapp.com/${method}`);
-    return res.data
-}
+// const fetchPrice = async () => {
+//     // const res = await axios.post(`https://siteitoverone.herokuapp.com/user_create`,{
+//     //     username: "",
+//     //     password: "",
+//     //     email: ""
+//     //   });
 
-app.get('/swagger', async (req, res) => {
-        console.log(req.query)
-        const {method} = req.query
-        const data = await fetchPrice({method});
-        res.json(data);
-})
+//       const res = await axios({
+//         method: 'post',
+//         url: 'https://siteitoverone.herokuapp.com/user_create',
+//         content: {
+//             username: '',
+//             password: '',
+//             email: ""
+//         }
+//       });
+//     return res.data
+// }
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+// console.log(fetchPrice())
+// // app.post('/swagger', async (req, res) => {
+// //         console.log(req.query)
+// //         const data = await fetchPrice();
+// //         res.json(data);
+// // })
+
+// // app.get('/swagger', async () => {
+    
+// //     const data = await fetchPrice();
+// //     console.log(data)
+// // })
+
+// app.listen(port, () => {
+//     console.log(`Example app listening on port ${port}`)
+// })

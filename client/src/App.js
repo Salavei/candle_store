@@ -1,22 +1,33 @@
 import './App.css';
-import Candles from './components/Candles/Candles';
-import Footer from './components/Footer/Footer';
-import Explore from "./components/Explore";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import SignIn from './components/SignIn/SignIn';
-import Registration from './components/Registration/Registration';
+import Candles from './Components/Candles/Candles';
+import Footer from './Components/Footer/Footer';
+import SignIn from './Components/SignIn/SignIn';
+import Registration from './Components/Registration/Registration';
+import Header from './Components/Header/index'
+import {
+   Route,
+   Switch,
+   Redirect,
+   withRouter
+ } from "react-router-dom"
 
 function App() {
+   
    return (
       <div className="App">
-         {/* <Header/>
-      <Main/>
-      <Explore/>
-   <Candles />
-   <Footer /> */}
-         <SignIn />
-         {/* <Registration /> */}
+         <Switch>
+         <Route path='/home' component={Header} />
+         {/* <Header /> */}
+         {/* <Main />
+         <Explore />
+         <Candles />
+         <Footer /> */}
+         <Route  path='/SignIn' component={SignIn} />
+         <Route path='/Registration' component={Registration} />
+         <Redirect from='/' to='/home'/>
+         {/* <SignIn />
+         <Registration /> */}
+         </Switch>
       </div>
    )
 }
