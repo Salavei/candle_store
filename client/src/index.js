@@ -10,12 +10,15 @@ const history = createBrowserHistory();
 
 
 ReactDOM.render(
-  <React.StrictMode>
-     <Router history={history}>
-       <App/>
-     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <Router history={history}>
+
+                <App/>
+            </Router>
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
