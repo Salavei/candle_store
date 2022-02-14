@@ -39,6 +39,7 @@ const [password, setPassword] = useState('')
         console.log(t.json())
         if(t.statusText == "Create"){
             // window.location()
+
         }
     }
     

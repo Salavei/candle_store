@@ -1,15 +1,25 @@
 import "./stylesSignIn.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {checkUser, firstName, lastName, phoneNumber,eMail} from "../../Redux/slice";
+import {userName,userId, } from '../../Redux/slice'
+
+
 
 const SignIn = () => {
-   
+    const correctUser = useSelector((state) => state?.counter.user);
+    const dispatch = useDispatch()
+
+
     const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 
       const FindUser = (arr) => {
+
        return arr.filter(e => e.password == password && e.email == email)
             }
+
 
     const fetchOne = async () => {
         const t = await fetch('https://siteitoverone.herokuapp.com/user/?format=json', 
@@ -20,11 +30,35 @@ const [password, setPassword] = useState('')
           }}
         );
         const res = await t.json();
-        console.log(FindUser(res))
-        
+
+        let b =  FindUser(res);
+
+
+        if(b.length) {
+            dispatch(checkUser('faithful user'))
+            dispatch(userName(b[0].username))
+            dispatch(userId(b[0].id))
+            dispatch(firstName(b[0].first_name))
+            dispatch(lastName(b[0].last_name))
+            dispatch(eMail(b[0].email))
+            dispatch(phoneNumber(b[0].phone_number))
+
+        } else { console.log('no Ok')}
+
+        console.log(b)
+        console.log(res);
+
+        setEmail('');
+        setPassword('')
+
+
     }
-    
-  
+
+
+    function foo () {
+        return(<Redirect to = '/searchTheLogin'/>)
+    }
+
 
     return (
         <div style={{ textAlign: "-webkit-center" }}>
@@ -42,9 +76,13 @@ const [password, setPassword] = useState('')
                     
                     <a>Я забыл(а) пароль</a>
                 </div>
-                <div 
-                 onClick={fetchOne}
-                className="buttonSingIn">Войти</div>
+                <div style={{width:'300px'}} onClick={foo}>
+                    <div
+                        onClick={fetchOne}
+                        className="buttonSingIn">Войти</div>
+                </div>
+
+
                 <Link to='/Registration'>
                 <a>Регистрация</a>
                 </Link>
