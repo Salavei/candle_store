@@ -37,6 +37,10 @@ const [password, setPassword] = useState('')
           },
           body: JSON.stringify(user)}
         );
+
+        let result = await t.json();
+
+        alert(result.username);
           
 
         console.log(t.json())
