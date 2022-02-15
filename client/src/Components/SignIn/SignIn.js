@@ -15,9 +15,6 @@ const SignIn = () => {
     const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
      
-
-
-
       const FindUser = (arr) => {
 
        return arr.filter(e => e.password == password && e.email == email)
