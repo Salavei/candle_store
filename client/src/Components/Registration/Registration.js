@@ -37,21 +37,26 @@ const [password, setPassword] = useState('')
           },
           body: JSON.stringify(user)}
         );
-
         let result = await t.json();
+        // alert(result.username);
 
-        alert(result.username);
-          
 
-        console.log(t.json())
-       
 
-        // if(t.statusText == "Create"){
-        //     alert('пользователь зарегистрирован')
+        if (result.username == 'Это поле не может быть пустым.') {
+            alert('Необходимо ввести все поля')
+        }  else if (result.username == 'Клиент с таким username уже существует.'){
+            alert('Такой пользователь уже существует, введите новый Логин')
+        } else  {
+            alert("Регистрация прошла успешно!!");
+            redirect()
+        }
 
-        // } else ( alertClasses('обнаружена ошибка'))
     }
     
+         function redirect () {
+             <Link to = '/main'/>
+        }
+
     return (
         <>
             <div className="borderContainer">
