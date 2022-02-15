@@ -9,7 +9,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { alertClasses } from '@mui/material';
 
-
 const Registration = () => {
 
 const [first_name, setFirst_name] = useState('')
@@ -38,25 +37,15 @@ const [password, setPassword] = useState('')
           body: JSON.stringify(user)}
         );
         let result = await t.json();
-        // alert(result.username);
-
-
-
         if (result.username == 'Это поле не может быть пустым.') {
             alert('Необходимо ввести все поля')
         }  else if (result.username == 'Клиент с таким username уже существует.'){
             alert('Такой пользователь уже существует, введите новый Логин')
         } else  {
             alert("Регистрация прошла успешно!!");
-            redirect()
         }
 
     }
-    
-         function redirect () {
-             <Link to = '/main'/>
-        }
-
     return (
         <>
             <div className="borderContainer">
