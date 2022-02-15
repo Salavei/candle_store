@@ -1,5 +1,6 @@
 import React from "react";
-import "./style.css"
+import "./style.css";
+import {Link} from "react-router-dom";
 
 const Main = () => {
     return(
@@ -15,8 +16,10 @@ const Main = () => {
                             </p>
                             <div className={'main_customize'}>
                                 <p>Customize</p>
-                                <div className={'arrow'}></div>
-                                <div className={'range'}></div>
+                                <Link to='/createCandle'>
+                                    <div className={'arrow'}></div>
+                                    <div className={'range'}></div>
+                                </Link>
                             </div>
                         </div>
                     </div>

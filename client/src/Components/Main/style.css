@@ -82,7 +82,7 @@ main {
     width: 107px;
     border: 1px solid #565959;
     box-sizing: border-box;
-    transform: translate(85%,53px);
+    transform: translate(-45%,53px);
     border-radius: 1px;
     cursor: pointer;
 }

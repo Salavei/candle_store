@@ -25,9 +25,11 @@ const Candles = () => {
           <button>Customize</button>
         </div>
         <div className='ContainerPictureCandle'>
-          <div className='Sqare'>
-            <img src={candel4} style={{ margin: '70px 55px' }} />
+          <div className='containerForImg'>
+            <div className='imageInContainer'>
+            </div>
           </div>
+
         </div>
       </section>
     </>

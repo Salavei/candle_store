@@ -7,6 +7,7 @@ import left from "./img/left.svg"
 import circle from "./img/circle.svg"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { alertClasses } from '@mui/material';
 
 
 const Registration = () => {
@@ -36,11 +37,15 @@ const [password, setPassword] = useState('')
           },
           body: JSON.stringify(user)}
         );
-        console.log(t.json())
-        if(t.statusText == "Create"){
-            // window.location()
+          
 
-        }
+        console.log(t.json())
+       
+
+        // if(t.statusText == "Create"){
+        //     alert('пользователь зарегистрирован')
+
+        // } else ( alertClasses('обнаружена ошибка'))
     }
     
     return (

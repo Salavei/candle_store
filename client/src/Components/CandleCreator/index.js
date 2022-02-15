@@ -6,13 +6,14 @@ import {useState} from "react";
 import {useSelector} from "react-redux";
 
 const Creator = () => {
-    const [value, SetValue] = useState('10')
+    const [value, SetValue] = useState('')
     const [type, setType] = useState('1')
     const [color,setColor] = useState('1')
     const [volume, SetVolume] = useState('1')
     const [smell, setSmell] = useState('1')
     const correctPhoneNumber = useSelector((state) => state?.counter.phone_number);
     const correctUserId = useSelector((state) => state?.counter.id);
+    
 
     const postOrder = async() => {
 
@@ -34,18 +35,18 @@ const Creator = () => {
             body: JSON.stringify(order)
         });
 
-        let result = await response.json();
-        alert(result.message);
+        let result = await response.json()
+
+        if(result.phone_number == "Это поле не может быть пустым."){
+            alert('Необходимо зарегистрироваться или войти')
+        } else (
+            alert("Заказ принят")
+        )
 
     }
 
-    // useEffect( () => {
-    //     chengeType()
-    //     chengeColor()
-    //     chengeVolume()
-    //     chengeSmell()
-    //
-    // })
+
+
 
 
     return (
@@ -76,8 +77,8 @@ const Creator = () => {
                             <div className={'creator_candleVolume'}>
                                 <p> Объем(мл): </p>
                                 <div>
-                                    <div className={'hundred'} onClick = {()=> SetVolume('1')}></div>
-                                    <div className={'twoHundred'} onClick = {()=> SetVolume('2')}></div>
+                                    <div className={'hundred'} onClick = {()=> {SetVolume('1'); SetValue('10')}}></div>
+                                    <div className={'twoHundred'} onClick = {()=> {SetVolume('2');SetValue('20') }}></div>
                                 </div>
                             </div>
                             <div className={'creator_candleSmell'}>

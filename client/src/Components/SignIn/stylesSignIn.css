@@ -39,15 +39,15 @@ padding-left: 40px;
 .buttonSingIn{
     background: linear-gradient(268.87deg, rgba(215, 143, 67, 0.68) 0%, rgba(215, 143, 67, 0) 100.94%);
     border-radius: 3px;
-width: 100%;
-border: 0;
+    width: 100%;
+    border: 0;
     font-family: Open Sans;
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 25px;
-margin-bottom: 15px;
-color: #9EA0A0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    color: #9EA0A0;
 }
 
 .buttonSingIn:hover{

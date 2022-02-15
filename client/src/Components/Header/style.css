@@ -73,6 +73,26 @@
     height: 33px;
 }
 
+.hiUser {
+    margin: 18px 0px 18px 0px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: transparent;
+    color: #9EA0A0;
+    cursor: pointer;
+    font-family: 'Jost', Medium;
+    font-size: 25px;
+    line-height: 26px;
+    position: relative;
+    padding-right: 20px;
+    height: 33px;
+    position: relative;
+    transform: translateX(-50px);
+    width: 200px;
+    padding-left: 20px;
+    text-transform: capitalize;
+}
+
 .header_button::after {
     content: '';
     background-image: url("./img/ant-design_user-outlined.png");

@@ -13,8 +13,8 @@ const SignIn = () => {
 
 
     const [email, setEmail] = useState('')
-const [password, setPassword] = useState('')
-     
+    const [password, setPassword] = useState('')
+
       const FindUser = (arr) => {
 
        return arr.filter(e => e.password == password && e.email == email)
@@ -29,6 +29,9 @@ const [password, setPassword] = useState('')
             'Content-Type': 'application/json'
           }}
         );
+
+        console.log(t.response)
+
         const res = await t.json();
 
         let b =  FindUser(res);
@@ -42,11 +45,12 @@ const [password, setPassword] = useState('')
             dispatch(lastName(b[0].last_name))
             dispatch(eMail(b[0].email))
             dispatch(phoneNumber(b[0].phone_number))
+            alert('Пользователь найден, можно производить заказ')
 
-        } else { console.log('no Ok')}
+        } else { alert('Неверный email или пароль')}
 
-        console.log(b)
-        console.log(res);
+        // console.log(b)
+        // console.log(res);
 
         setEmail('');
         setPassword('')
@@ -76,7 +80,7 @@ const [password, setPassword] = useState('')
                     
                     <a>Я забыл(а) пароль</a>
                 </div>
-                <div style={{width:'300px'}} onClick={foo}>
+                <div onClick={foo}>
                     <div
                         onClick={fetchOne}
                         className="buttonSingIn">Войти</div>

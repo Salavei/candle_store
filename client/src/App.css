@@ -1,6 +1,23 @@
 .App {
-
   background-color: #0D1112;
  padding-top: 20px;
   padding-bottom: 0;
+}
+
+ul {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #9EA0A0;
+  font-family: Jost;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-decoration: none;
 }

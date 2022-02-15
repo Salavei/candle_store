@@ -5,22 +5,50 @@ padding: 30px;
 background: linear-gradient(153.77deg, rgba(215, 143, 67, 0.7) 5.54%, rgba(215, 143, 67, 0) 80.26%);
 border-radius: 5px;
 margin-left: 60px;
+position: relative;
+}
+
+.ContainerPictureCandle:first-child:before {
+    content: '';
+    height: 1000px;
+    width: 1300px;
+    position: absolute;
+    top: -85%;
+    left: -105%;
+    background: radial-gradient(30.13% 37.8% at 50% 50%, rgba(255, 255, 255, 0.31) 0%, rgba(255, 255, 255, 0) 100%);
+    background-size: contain;
+}
+
+.ContainerPictureCandle:last-child {
+    background: linear-gradient(206.21deg, rgba(215, 143, 67, 0.7) 5.11%, rgba(215, 143, 67, 0) 79.17%);
+
+}
+
+.ContainerPictureCandle:last-child:before {
+    content: '';
+    height: 1000px;
+    width: 1300px;
+    position: absolute;
+    top: -85%;
+    left: -10%;
+    background: radial-gradient(30.13% 37.8% at 50% 50%, rgba(255, 255, 255, 0.31) 0%, rgba(255, 255, 255, 0) 100%);
+    background-size: contain;
 }
 
 .Sqare{
     width: 520px;
-height: 520px;
+    height: 520px;
 
-border: 0.5px solid #9EA0A0;
-box-sizing: border-box;
-border-radius: 7px;
+    border: 0.5px solid #9EA0A0;
+    box-sizing: border-box;
+    border-radius: 7px;
 }
 
 .ContainerCandel_1{
     display: flex;
-    margin-top: 120px;
-    margin-bottom: 120px;
     justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 .ContainerCandel_2{
@@ -32,6 +60,10 @@ border-radius: 7px;
     box-sizing: border-box;
     border-radius: 20px;
     padding: 120px 60px;
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 .textBlock{
@@ -45,14 +77,14 @@ border-radius: 7px;
 
 .textBlock a{
     font-family: Cormorant;
-font-style: normal;
-font-weight: bold;
-font-size: 48px;
-line-height: 58px;
-text-align: right;
-margin: 0;
-color: #9EA0A0;
-margin-bottom: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: right;
+    margin: 0;
+    color: #9EA0A0;
+    margin-bottom: 30px;
 }
 
 .textBlock p{
@@ -78,18 +110,18 @@ margin-bottom: 30px;
     border: 0.5px solid #D78F43;
     box-sizing: border-box;
     border-radius: 3px;
-margin-top: 30px;
+    margin-top: 30px;
     font-family: Jost;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 26px;
-display: flex;
-align-items: center;
-align-self: self-end;
-background-color: rgba(215, 143, 67, 0);
-color: #9EA0A0;
-justify-content: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    align-self: self-end;
+    background-color: rgba(215, 143, 67, 0);
+    color: #9EA0A0;
+    justify-content: center;
 }
 
 .ContainerCandel_2 p{
@@ -107,4 +139,17 @@ justify-content: center;
 .ContainerCandel_2 .textBlock{
     margin-top: 100px;
     margin-left: 90px;
+}
+
+.imageInContainer {
+    width: 410px;
+    height: 380px;
+    background-image: url('./images/candel4.svg');
+}
+
+.containerForImg {
+    padding: 70px 55px 70px 55px;
+    border: 0.5px solid #9EA0A0;
+    box-sizing: border-box;
+    border-radius: 7px;
 }
