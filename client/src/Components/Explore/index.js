@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './style.css';
 import { useSelector } from "react-redux";
 
@@ -7,9 +7,12 @@ import { useSelector } from "react-redux";
 const Explore = () => {
     const correctPhoneNumber = useSelector((state) => state?.counter.phone_number);
     const correctUserId = useSelector((state) => state?.counter.id);
+    const [count, setCount] = useState('')
+    const [price, setPrice] = useState('')
 
     const orderOne = async() => {
-        let order = {
+        if(count >=1) {
+            let order = {
             "phone_number": `${correctPhoneNumber}`,
             "address": "nezalezhnasti",
             "candle_t": "1",
@@ -17,7 +20,7 @@ const Explore = () => {
             "candle_flavor": "1",
             "candle_volume": "1",
             "user_id": `${correctUserId}`
-        }
+            }
         let response = await fetch('https://siteitoverone.herokuapp.com/order/', {
             method: 'POST',
             headers: {
@@ -25,7 +28,26 @@ const Explore = () => {
             },
             body: JSON.stringify(order)
         });
+
+        let result = response.status;
+        if(result == 400) {
+            alert('Необходимо войти в учетную запись')
+        } else if (result == 201){
+            alert('Заказ успешно совершен')
+        }
+    } else if (count == 0) {
+        alert('Даннх свечей нет в наличии')
     }
+}
+        const getPrice = async () => {
+            let response = await fetch('https://siteitoverone.herokuapp.com/product_get/');
+            let result = await response.json();
+            setCount(result[0].count);
+            setPrice(result[0].price)
+            console.log(result[0].price)
+        }
+
+        getPrice()
 
     return (
         <>
@@ -45,9 +67,9 @@ const Explore = () => {
                                 </p>
                                 <p className={'explore_price'}>
                                     <span>Объем:</span> 200мл
-                                    <span> Цена: 27 BYN</span>
+                                    <span> Цена: {price} BYN</span>
                                 </p>
-                                <button className={'explore_button'} >
+                                <button className={'explore_button'} onClick = {orderOne} >
                                     Customize
                                 </button>
                             </div>
